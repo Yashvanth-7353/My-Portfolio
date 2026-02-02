@@ -15,7 +15,7 @@ const Projects = () => {
         className="mb-16"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold">
-          SELECTED WORKS <span className="text-accent">.</span>
+          MY PROJECTS <span className="text-accent">.</span>
         </h2>
         <p className="text-text-muted mt-4 text-lg">
           Engineering solutions for real-world problems.

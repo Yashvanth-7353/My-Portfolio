@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa"; // Imported FaFileAlt
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { LINKS, NAV_LINKS } from "../../constants";
 
@@ -9,7 +9,6 @@ const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle Theme Logic
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
@@ -18,7 +17,6 @@ const Navbar = () => {
     }
   }, [isDark]);
 
-  // Lock scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -36,7 +34,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between w-full max-w-5xl bg-bg-surface/80 backdrop-blur-md border border-line rounded-full px-6 py-3 shadow-xl">
           
-          {/* 1. LOGO / HOME */}
+          {/* 1. LOGO */}
           <Link 
             to="hero" 
             smooth={true} 
@@ -45,7 +43,7 @@ const Navbar = () => {
             YM.
           </Link>
 
-          {/* 2. DESKTOP LINKS (Hidden on Mobile) */}
+          {/* 2. DESKTOP LINKS */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <Link 
@@ -60,13 +58,15 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* 3. ACTIONS (Toggle + Socials + Mobile Menu) */}
+          {/* 3. ACTIONS */}
           <div className="flex items-center gap-4">
             
-            {/* Social Icons (Desktop only to save space on mobile) */}
+            {/* Social Icons + Resume */}
             <div className="hidden md:flex gap-4 border-r border-line pr-4">
               <a href={LINKS.github} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors"><FaGithub /></a>
               <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors"><FaLinkedin /></a>
+              {/* NEW RESUME LINK */}
+              <a href={LINKS.resume} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors" title="My Resume"><FaFileAlt /></a>
             </div>
 
             {/* Theme Toggle */}
@@ -103,7 +103,6 @@ const Navbar = () => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="fixed inset-0 z-[60] bg-bg-main flex flex-col justify-center items-center"
           >
-            {/* Close Button */}
             <button 
               onClick={() => setIsOpen(false)}
               className="absolute top-8 right-8 text-3xl text-text-muted hover:text-accent transition-colors"
@@ -111,7 +110,6 @@ const Navbar = () => {
               <HiX />
             </button>
 
-            {/* Mobile Links */}
             <div className="flex flex-col gap-8 text-center">
               {NAV_LINKS.map((link) => (
                 <Link 
@@ -127,10 +125,10 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Mobile Socials */}
             <div className="flex gap-8 mt-16 text-2xl text-text-muted">
               <a href={LINKS.github}><FaGithub /></a>
               <a href={LINKS.linkedin}><FaLinkedin /></a>
+              <a href={LINKS.resume}><FaFileAlt /></a>
             </div>
           </motion.div>
         )}

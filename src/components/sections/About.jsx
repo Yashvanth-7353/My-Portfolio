@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { FaFileAlt } from "react-icons/fa"; // Make sure you have this icon imported
 import Section from "../layout/Section";
-import { ABOUT_CONTENT, EDUCATION } from "../../constants";
+import { ABOUT_CONTENT, EDUCATION, LINKS } from "../../constants"; // <--- ADDED LINKS HERE
 
 const About = () => {
   return (
@@ -10,8 +11,7 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        // 1. CHANGED: Increased from mb-10 to mb-20 for MORE gap above the line
-        className="mb-8"
+        className="mb-20"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold">
           ABOUT ME <span className="text-accent">.</span>
@@ -28,8 +28,7 @@ const About = () => {
           className="space-y-10"
         >
           {/* Bio Box */}
-          {/* 2. CHANGED: Added '!pt-6' to force LESS gap below the line (overrides default p-8) */}
-          <div className="bento-card relative !pt-2">
+          <div className="bento-card relative !pt-6">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-transparent opacity-50" />
             
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2 mt-2">
@@ -54,6 +53,20 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          {/* RESUME BUTTON */}
+          <div className="flex justify-center md:justify-start">
+            <a 
+              href={LINKS.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-8 py-4 bg-text-main text-bg-main font-bold rounded-full hover:bg-accent hover:text-bg-main transition-all shadow-lg hover:shadow-accent/20 hover:-translate-y-1"
+            >
+              <FaFileAlt className="text-lg group-hover:rotate-12 transition-transform" />
+              <span>MY RESUME</span>
+            </a>
+          </div>
+
         </motion.div>
 
         {/* --- RIGHT COLUMN: EDUCATION TIMELINE --- */}
@@ -65,7 +78,6 @@ const About = () => {
         >
           {EDUCATION.map((edu, index) => (
             <div key={index} className="relative group">
-              {/* Timeline Dot */}
               <div className="absolute -left-[37px] top-2 w-4 h-4 rounded-full bg-bg-surface border-2 border-line group-hover:border-accent group-hover:scale-125 transition-all duration-300" />
               
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">

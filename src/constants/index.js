@@ -16,14 +16,15 @@ export const HERO_CONTENT = {
   name: "YASHVANTH M U",
   role: "Full Stack Engineer.",
   description: "Aspiring Software Engineer proficient in full-stack web development, Cloud Computing (GCP), and AI/ML integration. Passionate about engineering scalable, intelligent systems that solve real-world problems.",
-  resumeLink: "#",
+  resumeLink: "public/Resume.pdf",
 };
 
 export const LINKS = {
   github: "https://github.com/Yashvanth-7353",
   linkedin: "https://linkedin.com/in/yashvanth-m-u",
-  email: "yashavanth.mu870@gmail.com", // Removed 'mailto:' for cleaner display logic
-  phone: "+91 7353027029" // Added from resume
+  email: "yashavanth.mu870@gmail.com",
+  phone: "+91 7353027029",
+  resume: "public/Resume.pdf" // Ensure your file is named resume.pdf in public folder
 };
 // ... keep existing HERO_CONTENT, LINKS, etc. ...
 
