@@ -5,11 +5,12 @@ import Terminal from "../ui/Terminal";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 md:px-12 max-w-7xl mx-auto pt-20 overflow-hidden">
-      {/* CHANGED: gap-[5px] for mobile (vertical stack), md:gap-12 for desktop */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[5px] md:gap-20 items-center w-full">
+      {/* 1. Reset gap to standard handling */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-20 items-center w-full">
         
         {/* --- LEFT SIDE: TEXT --- */}
-        <div className="relative z-10">
+        {/* 2. Added 'mb-12 md:mb-0' to force space below text on mobile */}
+        <div className="relative z-10 mb-12 md:mb-0">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -23,7 +24,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold mt-4 mb-4 leading-tight whitespace-nowrap"
+            className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mt-4 mb-4 leading-tight whitespace-nowrap"
           >
             {HERO_CONTENT.name}
           </motion.h1>
