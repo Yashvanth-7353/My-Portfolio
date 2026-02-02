@@ -12,7 +12,7 @@ const Hero = () => {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            transition={{yb: 0.1 }}
             className="text-accent font-display font-medium tracking-wider text-sm md:text-base uppercase"
           >
             {HERO_CONTENT.greeting}
@@ -22,8 +22,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            // REDUCED SIZE HERE: text-5xl on mobile, text-7xl on desktop
-            className="text-5xl md:text-7xl font-display font-extrabold mt-4 mb-4 leading-tight"
+            className="text-5xl md:text-6xl font-display font-extrabold mt-4 mb-4 leading-tight"
           >
             {HERO_CONTENT.name}
           </motion.h1>
@@ -62,7 +61,8 @@ const Hero = () => {
         </div>
 
         {/* --- RIGHT SIDE: TERMINAL --- */}
-        <div className="order-1 md:order-2 flex justify-center relative">
+        {/* Added 'md:translate-x-12' to move it right */}
+        <div className="order-1 md:order-2 flex justify-center md:justify-end relative md:translate-x-12">
           
           {/* Background Glow Effect */}
           <div className="absolute inset-0 bg-accent/10 blur-[120px] rounded-full w-[300px] h-[300px] mx-auto my-auto z-0" />

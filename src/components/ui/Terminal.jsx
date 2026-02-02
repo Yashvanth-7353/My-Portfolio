@@ -10,20 +10,23 @@ const Terminal = () => {
   const [inputValue, setInputValue] = useState("./why_hire_me.sh");
   const [isProcessing, setIsProcessing] = useState(false);
   const inputRef = useRef(null);
-  const bottomRef = useRef(null);
+  const terminalBodyRef = useRef(null); // CHANGED: Ref for the container, not the bottom
 
-  // Auto-scroll to bottom
+  // CHANGED: Logic to scroll ONLY the terminal container
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
   }, [lines, isProcessing]);
 
-  // Focus input on click
   const handleTerminalClick = () => {
     inputRef.current?.focus();
   };
 
   const handleKeyDown = async (e) => {
     if (e.key === "Enter" && !isProcessing) {
+      e.preventDefault(); // Prevent page refresh/jumping
+      
       const command = inputValue.trim();
       
       // Add command to history
@@ -77,7 +80,7 @@ const Terminal = () => {
 
     for (const step of steps) {
       setLines((prev) => [...prev, { text: step, type: "system" }]);
-      await new Promise(r => setTimeout(r, 300)); // Delay between steps
+      await new Promise(r => setTimeout(r, 300));
     }
   };
 
@@ -103,7 +106,10 @@ const Terminal = () => {
       </div>
 
       {/* TERMINAL BODY */}
-      <div className="flex-1 p-4 overflow-y-auto custom-scrollbar text-gray-300">
+      <div 
+        ref={terminalBodyRef} // CHANGED: Attach ref here
+        className="flex-1 p-4 overflow-y-auto custom-scrollbar text-gray-300"
+      >
         {lines.map((line, i) => (
           <div 
             key={i} 
@@ -133,8 +139,6 @@ const Terminal = () => {
             spellCheck="false"
           />
         </div>
-        
-        <div ref={bottomRef} />
       </div>
     </div>
   );
