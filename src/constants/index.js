@@ -63,35 +63,38 @@ export const EDUCATION = [
 ];
 
 // ... keep existing PROJECTS, SKILLS, NAV_LINKS ...
-
 export const PROJECTS = [
   {
     title: "NutriTrack AI",
     category: "AI & Health Tech",
-    description: "Architected a Next.js app using Google Gemini API to analyze ingredient lists for health risks and FSSAI compliance.",
-    tech: ["Next.js", "Google Gemini", "ShadCN/UI", "Serverless"],
-    link: "#"
+    description: "Architected a Next.js app using Google Gemini API to analyze ingredient lists for health risks and FSSAI compliance. Optimized UI performance by 30% using Serverless functions.",
+    tech: ["Next.js", "Google Gemini", "Tailwind CSS", "Serverless"],
+    repo: "https://github.com/Yashvanth-7353", 
+    demo: null // SET TO NULL TO HIDE DEMO BUTTON
   },
   {
     title: "Network Navigator",
     category: "IoT & Algorithms",
-    description: "Engineered a network topology editor simulating routing for 50+ nodes with Dijkstra's algorithm and real-time metrics.",
-    tech: ["ReactFlow", "IoT", "Algorithms", "React"],
-    link: "#"
+    description: "Engineered a network topology editor simulating routing for 50+ nodes. Implemented Dijkstra's algorithm to visualize pathfinding in real-time.",
+    tech: ["ReactFlow", "React.js", "Algorithms", "IoT"],
+    repo: "https://github.com/Yashvanth-7353",
+    demo: "https://github.com/Yashvanth-7353" // Example: No live link
   },
   {
     title: "Alzheimer's Assistant",
     category: "Cloud & Vision AI",
-    description: "Built a secure backend handling media uploads to GCP, integrating Google Vision API for 95% precision face recognition.",
-    tech: ["Node.js", "GCP", "Vision API", "Express"],
-    link: "#"
+    description: "Built a secure backend handling media uploads to GCP. Integrated Google Vision API for 95% precision face recognition to help patients recall memories.",
+    tech: ["Node.js", "Google Cloud", "Vision API", "Express"],
+    repo: "https://github.com/Yashvanth-7353",
+    demo: null // Example: No live link
   },
   {
     title: "Predictive Maintenance",
     category: "ML & IoT",
-    description: "Developed an IoT sensing module (ESP32) and trained a Random Forest classifier achieving 92% accuracy in fault detection.",
+    description: "Developed an IoT sensing module (ESP32) and trained a Random Forest classifier achieving 92% accuracy in detecting machinery faults.",
     tech: ["Python", "Scikit-learn", "IoT/ESP32", "Firebase"],
-    link: "#"
+    repo: "https://github.com/Yashvanth-7353",
+    demo: "https://github.com/Yashvanth-7353" // Example: No live link
   }
 ];
 
