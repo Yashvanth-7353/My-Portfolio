@@ -1,4 +1,15 @@
 // src/constants/index.js
+// src/constants/index.js
+
+export const NAV_LINKS = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Tech Stack" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
+// ... Keep your existing HERO_CONTENT, PROJECTS, SKILLS, etc. below ...
+// If you lost the previous data, I can provide the full file again.
 
 export const HERO_CONTENT = {
   greeting: "HELLO, I AM",
