@@ -1,19 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* --- THEME SETTINGS (Must come after imports) --- */
+@theme {
+  /* Fonts */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
 
-:root {
-  color-scheme: dark;
+  /* Semantic Variables */
+  --color-bg-main: var(--bg-main);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
 }
 
+/* --- COLOR MODES --- */
+:root {
+  /* LIGHT MODE */
+  --bg-main: #FDFCF8;
+  --bg-surface: #F4F1EA;
+  --text-main: #1A2F25;
+  --text-muted: #5C6B64;
+  --line: #E5E0D6;
+  --accent: #E76F51;
+  --grain-opacity: 0.03;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* DARK MODE */
+    --bg-main: #050505;
+    --bg-surface: #121212;
+    --text-main: #E0E0E0;
+    --text-muted: #888888;
+    --line: #222222;
+    --accent: #CCFF00;
+    --grain-opacity: 0.05;
+  }
+}
+
+/* --- BASE STYLES --- */
 body {
-  @apply bg-void text-gray-200 font-body antialiased;
+  @apply bg-bg-main text-text-main font-body antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
   overflow-x: hidden;
 }
 
-/* The "Film Grain" Texture for depth */
 .grain-overlay {
   position: fixed;
   top: 0;
@@ -22,12 +57,11 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.04;
+  opacity: var(--grain-opacity);
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   filter: contrast(170%) brightness(100%);
 }
 
-/* Custom Selection Color */
 ::selection {
-  @apply bg-accent text-void;
+  @apply bg-accent text-bg-main;
 }

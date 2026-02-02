@@ -14,7 +14,7 @@ const Hero = () => {
         animate="visible" 
         variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
       >
-        <motion.span variants={textVariants} className="text-accent font-display font-medium tracking-wider text-sm md:text-base">
+        <motion.span variants={textVariants} className="text-accent font-display font-medium tracking-wider text-sm md:text-base uppercase">
           {HERO_CONTENT.greeting}
         </motion.span>
         
@@ -22,17 +22,14 @@ const Hero = () => {
           {HERO_CONTENT.name}
         </motion.h1>
         
-        <motion.h2 variants={textVariants} className="text-4xl md:text-6xl font-display font-bold text-gray-500 mt-2">
+        <motion.h2 variants={textVariants} className="text-4xl md:text-6xl font-display font-bold text-text-muted mt-2">
           {HERO_CONTENT.role}
         </motion.h2>
 
-        <motion.p variants={textVariants} className="mt-8 text-lg text-gray-400 max-w-xl font-light leading-relaxed">
+        <motion.p variants={textVariants} className="mt-8 text-lg text-text-muted max-w-xl font-light leading-relaxed">
           {HERO_CONTENT.description}
         </motion.p>
       </motion.div>
-
-      {/* Background Decorative Element */}
-      <div className="absolute right-0 top-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };
