@@ -14,9 +14,9 @@ export const NAV_LINKS = [
 export const HERO_CONTENT = {
   greeting: "HELLO, I AM",
   name: "YASHVANTH M U",
-  role: "Full Stack Engineer & Cloud Architect",
-  description: "Engineering scalable, intelligent systems that bridge the gap between complex backend logic and intuitive frontend experiences. Focused on GCP, AI/ML Integration, and Next.js.",
-  resumeLink: "#", // Add your PDF link here later
+  role: "Full Stack Engineer.",
+  description: "Aspiring Software Engineer proficient in full-stack web development, Cloud Computing (GCP), and AI/ML integration. Passionate about engineering scalable, intelligent systems that solve real-world problems.",
+  resumeLink: "#",
 };
 
 export const LINKS = {
