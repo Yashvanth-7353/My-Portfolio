@@ -24,6 +24,45 @@ export const LINKS = {
   linkedin: "https://linkedin.com/in/yashvanth-m-u",
   email: "mailto:yashavanth.mu870@gmail.com"
 };
+// ... keep existing HERO_CONTENT, LINKS, etc. ...
+
+export const ABOUT_CONTENT = {
+  title: "Background",
+  subtitle: "From Logic to Systems",
+  bio: "My journey started with a curiosity for how things work, which quickly evolved into a passion for engineering scalable software. I don't just write code; I design systems. Whether it's optimizing backend logic for a Smart Village dashboard or training AI models for healthcare, I treat every project as a problem-solving expedition.",
+  stats: [
+    { label: "CGPA", value: "8.51" },
+    { label: "Projects", value: "10+" },
+    { label: "Failure Loops", value: "100+" }
+ // Estimate
+  ]
+};
+
+export const EDUCATION = [
+  {
+    school: "RV College of Engineering",
+    degree: "B.E. in Information Science",
+    year: "2023 - Present",
+    grade: "CGPA: 8.51",
+    desc: "Focus on Data Structures, Algorithms, Cloud Computing (GCP), and Operating Systems."
+  },
+  {
+    school: "Vidyanidhi PU College",
+    degree: "Class 12 (PCMB)",
+    year: "2021 - 2023",
+    grade: "93%",
+    desc: "Built analytical thinking in Physics and Mathematics, laying the foundation for engineering logic."
+  },
+  {
+    school: "Ravindra Bharathi Vidya Mandira",
+    degree: "Class 10 (Secondary)",
+    year: "2021",
+    grade: "94.56%",
+    desc: "Established a strong foundation in core sciences, emphasizing logical thinking, accuracy, and problem-solving."
+  }
+];
+
+// ... keep existing PROJECTS, SKILLS, NAV_LINKS ...
 
 export const PROJECTS = [
   {

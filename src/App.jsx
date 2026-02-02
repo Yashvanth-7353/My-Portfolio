@@ -1,5 +1,6 @@
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
+import About from "./components/sections/About"; // <--- IMPORT THIS
 import Projects from "./components/sections/Projects";
 import Section from "./components/layout/Section";
 import { SKILLS, HERO_CONTENT, LINKS } from "./constants";
@@ -14,7 +15,9 @@ function App() {
       <section id="hero">
         <Hero />
       </section>
-      
+      <section id="about">
+        <About />
+      </section>
       {/* 2. Skills Section */}
       <Section id="skills">
         <h2 className="text-3xl font-display font-bold mb-12">TECHNICAL ARSENAL<span className="text-accent">.</span></h2>
