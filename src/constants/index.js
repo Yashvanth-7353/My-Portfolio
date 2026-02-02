@@ -22,7 +22,8 @@ export const HERO_CONTENT = {
 export const LINKS = {
   github: "https://github.com/Yashvanth-7353",
   linkedin: "https://linkedin.com/in/yashvanth-m-u",
-  email: "mailto:yashavanth.mu870@gmail.com"
+  email: "yashavanth.mu870@gmail.com", // Removed 'mailto:' for cleaner display logic
+  phone: "+91 7353027029" // Added from resume
 };
 // ... keep existing HERO_CONTENT, LINKS, etc. ...
 
