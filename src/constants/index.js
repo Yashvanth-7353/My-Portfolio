@@ -2,12 +2,12 @@
 // src/constants/index.js
 
 export const NAV_LINKS = [
+  { id: "hero", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Tech Stack" },
+  { id: "skills", label: "Stack" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
-
 // ... Keep your existing HERO_CONTENT, PROJECTS, SKILLS, etc. below ...
 // If you lost the previous data, I can provide the full file again.
 
@@ -15,7 +15,7 @@ export const HERO_CONTENT = {
   greeting: "HELLO, I AM",
   name: "YASHVANTH M U",
   role: "Full Stack Engineer.",
-  description: "Aspiring Software Engineer proficient in full-stack web development, Cloud Computing (GCP), and AI/ML integration. Passionate about engineering scalable, intelligent systems that solve real-world problems.",
+  description: "Results-oriented Developer specialized in Full-Stack Web Development and AI integration. Dedicated to engineering robust, scalable systems that solve real-world problems.",
   resumeLink: "public/Resume.pdf",
 };
 
@@ -31,7 +31,7 @@ export const LINKS = {
 export const ABOUT_CONTENT = {
   title: "Background",
   subtitle: "From Logic to Systems",
-  bio: "My journey started with a curiosity for how things work, which quickly evolved into a passion for engineering scalable software. I don't just write code; I design systems. Whether it's optimizing backend logic for a Smart Village dashboard or training AI models for healthcare, I treat every project as a problem-solving expedition.",
+  bio: "I am a results-oriented developer from RV College of Engineering with a track record of transforming concepts into deployed products. My expertise lies in combining creative problem-solving with Artificial Intelligence to deliver user-centric applications. Whether it's architecting 100% type-safe backends or training high-dimensional vector search engines, I treat every project as an engineering expedition.",
   stats: [
     { label: "CGPA", value: "8.51" },
     { label: "Projects", value: "10+" },
@@ -46,7 +46,7 @@ export const EDUCATION = [
     degree: "B.E. in Information Science",
     year: "2023 - Present",
     grade: "CGPA: 8.51",
-    desc: "Focus on Data Structures, Algorithms, Cloud Computing (GCP), and Operating Systems."
+    desc: "Relevant Coursework: Data Structures & Algorithms, DBMS, Operating Systems, OOP, Cloud Computing."
   },
   {
     school: "Vidyanidhi PU College",
@@ -64,30 +64,45 @@ export const EDUCATION = [
   }
 ];
 
-// ... keep existing PROJECTS, SKILLS, NAV_LINKS ...
 export const PROJECTS = [
+  {
+    title: "trueProject",
+    category: "AI & EdTech",
+    description: "Architected a project lifecycle system using FastAPI with 100% type safety. Integrated Google Gemini as an automated 'LLM Judge' to reduce faculty review time by 60% and engineered a sub-millisecond plagiarism engine using FAISS.",
+    tech: ["FastAPI", "React.js", "PostgreSQL", "Google Gemini", "FAISS"],
+    repo: "https://github.com/Yashvanth-7353/trueProject", 
+    demo: "https://trueprojects.vercel.app/" 
+  },
+  {
+    title: "Gram Sahayak",
+    category: "GovTech & Geospatial",
+    description: "Developed a high-throughput digital governance platform handling 1000+ concurrent requests. Features real-time geospatial mapping (Leaflet.js) and AI-driven grievance routing using OpenRouter API.",
+    tech: ["FastAPI", "MongoDB (Async)", "React.js", "AWS S3", "Leaflet.js"],
+    repo: "https://github.com/Yashvanth-7353/Gram-Sahayak",
+    demo: "https://gramsahayak.vercel.app/"
+  },
+  {
+    title: "Network Navigator",
+    category: "Algorithms & Viz",
+    description: "Engineered an interactive topology editor for 50+ nodes using React Flow. Implemented live Dijkstra's algorithm visualization and a real-time analytics dashboard for monitoring latency and throughput.",
+    tech: ["Next.js", "TypeScript", "React Flow", "Shadcn/UI"],
+    repo: "https://github.com/Yashvanth-7353/Network_Navigator",
+    demo: null 
+  },
   {
     title: "NutriTrack AI",
     category: "AI & Health Tech",
     description: "Architected a Next.js app using Google Gemini API to analyze ingredient lists for health risks and FSSAI compliance. Optimized UI performance by 30% using Serverless functions.",
     tech: ["Next.js", "Google Gemini", "Tailwind CSS", "Serverless"],
-    repo: "https://github.com/Yashvanth-7353", 
+    repo: "https://github.com/Yashvanth-7353/NutriTrack-AI", 
     demo: null // SET TO NULL TO HIDE DEMO BUTTON
-  },
-  {
-    title: "Network Navigator",
-    category: "IoT & Algorithms",
-    description: "Engineered a network topology editor simulating routing for 50+ nodes. Implemented Dijkstra's algorithm to visualize pathfinding in real-time.",
-    tech: ["ReactFlow", "React.js", "Algorithms", "IoT"],
-    repo: "https://github.com/Yashvanth-7353",
-    demo: "https://github.com/Yashvanth-7353" // Example: No live link
   },
   {
     title: "Alzheimer's Assistant",
     category: "Cloud & Vision AI",
     description: "Built a secure backend handling media uploads to GCP. Integrated Google Vision API for 95% precision face recognition to help patients recall memories.",
     tech: ["Node.js", "Google Cloud", "Vision API", "Express"],
-    repo: "https://github.com/Yashvanth-7353",
+    repo: "https://github.com/Yashvanth-7353/AlzAid",
     demo: null // Example: No live link
   },
   {
@@ -95,14 +110,14 @@ export const PROJECTS = [
     category: "ML & IoT",
     description: "Developed an IoT sensing module (ESP32) and trained a Random Forest classifier achieving 92% accuracy in detecting machinery faults.",
     tech: ["Python", "Scikit-learn", "IoT/ESP32", "Firebase"],
-    repo: "https://github.com/Yashvanth-7353",
-    demo: "https://github.com/Yashvanth-7353" // Example: No live link
+    repo: "https://github.com/Yashvanth-7353/Predictive_Maintenance",
+    demo: null  // Example: No live link
   }
 ];
 
 export const SKILLS = [
   { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "C++", "SQL"] },
-  { category: "Frontend", items: ["Next.js", "React.js", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend & Cloud", items: ["Node.js", "Google Cloud (GCP)", "Firebase", "PostgreSQL"] },
-  { category: "AI & Tools", items: ["Google Gemini", "Vision API", "Git", "Docker"] }
+  { category: "Frontend", items: ["Next.js", "React.js", "Tailwind CSS", "React Flow", "Shadcn/UI"] },
+  { category: "Backend & Cloud", items: ["FastAPI", "Node.js", "AWS (S3/EC2)", "MongoDB", "PostgreSQL"] },
+  { category: "AI & Tools", items: ["Google Gemini", "Docker", "Git/GitHub", "Linux", "Postman"] }
 ];
