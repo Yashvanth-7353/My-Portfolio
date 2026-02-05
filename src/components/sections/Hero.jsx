@@ -24,7 +24,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mt-4 mb-4 leading-tight whitespace-nowrap"
+            // CHANGED: Smoother responsive sizing to prevent overlap on 768px/1024px
+            // md:text-4xl (was 5xl) fixes tablet overlap
+            // lg:text-5xl restores size on laptops
+            // xl:text-6xl adds grandeur on desktops
+            className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-display font-extrabold mt-4 mb-4 leading-tight whitespace-nowrap"
           >
             {HERO_CONTENT.name}
           </motion.h1>
@@ -33,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-2xl md:text-4xl font-display font-bold text-text-muted mb-8"
+            className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-display font-bold text-text-muted mb-8"
           >
             {HERO_CONTENT.role}
           </motion.h2>
