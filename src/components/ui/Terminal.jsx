@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { LINKS } from "../../constants"; // Import links for dynamic contact info
+import { LINKS } from "../../constants"; 
 
 const Terminal = () => {
   const [lines, setLines] = useState([
@@ -7,20 +7,39 @@ const Terminal = () => {
     { text: "Last login: " + new Date().toUTCString(), type: "system" },
     { text: "Type 'help' for commands. Try 'ls' to see files.", type: "comment" },
   ]);
-  const [inputValue, setInputValue] = useState("");
+
+  // CHANGED: Pre-fill the command so it is loaded by default
+  const [inputValue, setInputValue] = useState("./why_hire_me.sh");
+  
   const [isProcessing, setIsProcessing] = useState(false);
+  const [headerTitle, setHeaderTitle] = useState("root@yashvanth: ~");
+  
   const inputRef = useRef(null);
   const terminalBodyRef = useRef(null);
 
-  // Auto-scroll
   useEffect(() => {
     if (terminalBodyRef.current) {
       terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
     }
   }, [lines, isProcessing]);
 
+  // Click & Copy Logic
   const handleTerminalClick = () => {
-    inputRef.current?.focus();
+    const selection = window.getSelection();
+    if (selection.toString().length === 0) {
+      inputRef.current?.focus();
+    }
+  };
+
+  const handleMouseUp = () => {
+    const selection = window.getSelection().toString();
+    if (selection.length > 0) {
+      navigator.clipboard.writeText(selection).then(() => {
+        const originalTitle = "root@yashvanth: ~";
+        setHeaderTitle("Copied to Clipboard! 📋");
+        setTimeout(() => setHeaderTitle(originalTitle), 1500);
+      }).catch(err => console.error("Copy failed", err));
+    }
   };
 
   const handleKeyDown = async (e) => {
@@ -35,7 +54,6 @@ const Terminal = () => {
       setInputValue("");
       setIsProcessing(true);
 
-      // --- COMMAND HANDLER ---
       if (command === "./why_hire_me.sh") {
         await runSimulation();
         showHireMeResult();
@@ -71,7 +89,7 @@ const Terminal = () => {
             "}"
           ], "result");
         } else if (file === "secret.txt") {
-          addOutput(["🥚 You found the Guy! Just Hire"], "success");
+          addOutput(["🥚 You found the easter egg! Just hire me already."], "success");
         } else if (file === "why_hire_me.sh") {
           addOutput(["Binary file not readable. Execute it with ./why_hire_me.sh"], "error");
         } else {
@@ -90,10 +108,9 @@ const Terminal = () => {
       else if (command === "sudo") {
         addOutput(["root@yashvanth is not in the sudoers file. This incident will be reported."], "error");
       }
-      // CHANGED: Clear command now keeps the help hint
       else if (command === "clear") {
         setLines([
-          { text: "Type 'help' for commands. Try 'ls' to see files.", type: "comment" }
+           { text: "Type 'help' for commands. Try 'ls' to see files.", type: "comment" }
         ]);
       } 
       else if (command === "help") {
@@ -117,41 +134,51 @@ const Terminal = () => {
     }
   };
 
-  // --- SIMULATION LOGIC ---
   const runSimulation = async () => {
     const delay = (ms) => new Promise(r => setTimeout(r, ms));
-    addOutput(["Initializing analytical engine v2.4...", "Loading candidate profile context..."], "system");
+    addOutput(["Initializing uniqueness check v2.4...", "Decrypting professional DNA..."], "system");
     await delay(600);
     const skills = [
-      "Verifying module: 'Full_Stack_Architecture'...",
-      "Checking dependencies: 'Next.js', 'FastAPI', 'PostgreSQL'...",
-      "Analyzing GitHub contributions...",
-      "Validating Cloud Credentials (GCP & AWS)...",
+      "Analyzing Problem Solving Patterns...",
+      "Verifying 'Results-Oriented' Architecture...",
+      "Checking Hackathon Performance (Top 5 Detected)...",
+      "Compiling Full-Stack + AI Integration Capabilities...",
     ];
     for (const skill of skills) {
       setLines(prev => [...prev, { text: skill, type: "process" }]);
       await delay(300);
     }
-    addOutput(["[####################] 100% Analysis Complete"], "success");
+    addOutput(["[####################] 100% Identity Verified"], "success");
     await delay(300);
   };
 
+  // --- NEW: UNIQUE & CONFIDENT ANSWER ---
   const showHireMeResult = () => {
     addOutput([
       "",
-      "----------------------------------------------------------",
-      "  CANDIDATE SUITABILITY AUDIT REPORT: [PASSED] ✔",
-      "----------------------------------------------------------",
-      "  [USER]: Yashvanth M U",
-      "  [ROLE]: Full Stack Engineer / AI Specialist",
+      "-------------------------------------------------------",
+      "  > CANDIDATE VALUE PROPOSITION: [MATCH FOUND] 🟢",
+      "-------------------------------------------------------",
       "",
-      "  > METRICS:",
-      "    ✔ Efficiency:    High (Serverless & AsyncIO)",
-      "    ✔ Accuracy:      92% on ML Models",
-      "    ✔ Soft Skills:   Rapid Prototyping (Hackfest Top 5)",
+      "  Most candidates write code. I engineer PRODUCTS.",
       "",
-      "  CONCLUSION: IMMEDIATE ASSET TO ENGINEERING TEAM.",
-      "----------------------------------------------------------",
+      "  > THE UNIQUE DIFFERENCE:",
+      "    1. I Build Systems, Not Just Features.",
+      "       From 100% type-safe backends to AI",
+      "       integration (Gemini), I own the full lifecycle.",
+      "",
+      "    2. I thrive where Logic meets Creativity.",
+      "       CGPA 8.51 + National Hackathon Finalist means",
+      "       I have the discipline to study and the grit to ship.",
+      "",
+      "  > CAPABILITY MATRIX:",
+      "    ✔ Backend:  High-Throughput",
+      "    ✔ AI/ML:    Manual Vector Search & LLM integration",
+      "    ✔ Mindset:  'It works on my machine' is not enough.",
+      "",
+      "  -------------------------------------------------------",
+      "  STATUS: READY TO DEPLOY. LET'S BUILD SOMETHING GREAT.",
+      "  -------------------------------------------------------",
       ""
     ], "result");
   };
@@ -164,23 +191,24 @@ const Terminal = () => {
   return (
     <div 
       onClick={handleTerminalClick}
+      onMouseUp={handleMouseUp}
       className="w-full max-w-lg h-[400px] bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden border border-gray-800 font-mono text-sm flex flex-col"
     >
-      {/* LINUX HEADER */}
       <div className="bg-[#2d2d2d] px-4 py-2 flex items-center justify-between border-b border-gray-700 select-none">
         <div className="flex gap-2">
           <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
           <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
           <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
         </div>
-        <div className="text-gray-400 text-xs font-bold">root@yashvanth: ~</div>
+        <div className={`text-xs font-bold transition-colors duration-300 ${headerTitle.includes("Copied") ? "text-green-400" : "text-gray-400"}`}>
+          {headerTitle}
+        </div>
         <div className="w-10"></div>
       </div>
 
-      {/* TERMINAL BODY */}
       <div 
         ref={terminalBodyRef}
-        className="flex-1 p-4 overflow-y-auto custom-scrollbar"
+        className="flex-1 p-4 overflow-y-auto custom-scrollbar selection:bg-green-500/30 selection:text-green-100"
       >
         {lines.map((line, i) => (
           <div 
@@ -201,7 +229,6 @@ const Terminal = () => {
           </div>
         ))}
 
-        {/* INPUT LINE */}
         <div className="flex items-center text-green-400 font-bold">
           <span className="mr-2">root@yashvanth:~$</span>
           <input
