@@ -16,7 +16,7 @@ export const HERO_CONTENT = {
   name: "YASHVANTH M U",
   role: "Full Stack Engineer.",
   description: "Results-oriented Developer specialized in Full-Stack Web Development and AI integration. Dedicated to engineering robust, scalable systems that solve real-world problems.",
-  resumeLink: "public/Resume.pdf",
+  resumeLink: "/Resume.pdf",
 };
 
 export const LINKS = {
