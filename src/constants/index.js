@@ -24,7 +24,7 @@ export const LINKS = {
   linkedin: "https://www.linkedin.com/in/yashvanth-m-u-720598282/",
   email: "yashavanth.mu870@gmail.com",
   phone: "+91 7353027029",
-  resume: "public/Resume.pdf" // Ensure your file is named resume.pdf in public folder
+  resume: "/Resume.pdf" // Ensure your file is named resume.pdf in public folder
 };
 // ... keep existing HERO_CONTENT, LINKS, etc. ...
 
