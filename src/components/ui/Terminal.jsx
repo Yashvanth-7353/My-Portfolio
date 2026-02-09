@@ -89,7 +89,7 @@ const Terminal = () => {
             "}"
           ], "result");
         } else if (file === "secret.txt") {
-          addOutput(["🥚 You found the easter egg! Just hire me already."], "success");
+          addOutput(["🥚 You found the easter egg! Just hire me."], "success");
         } else if (file === "why_hire_me.sh") {
           addOutput(["Binary file not readable. Execute it with ./why_hire_me.sh"], "error");
         } else {
@@ -165,7 +165,7 @@ const Terminal = () => {
       "  > THE UNIQUE DIFFERENCE:",
       "    1. I Build Systems, Not Just Features.",
       "       From 100% type-safe backends to AI",
-      "       integration (Gemini), I own the full lifecycle.",
+      "       integration, I own the full lifecycle.",
       "",
       "    2. I thrive where Logic meets Creativity.",
       "       CGPA 8.51 + National Hackathon Finalist means",
