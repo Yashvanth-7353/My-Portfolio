@@ -15,7 +15,7 @@ export const HERO_CONTENT = {
   greeting: "HELLO, I AM",
   name: "YASHVANTH M U",
   role: "Full Stack Engineer.",
-  description: "Results-oriented Developer specialized in Full-Stack Web Development and AI integration. Dedicated to engineering robust, scalable systems that solve real-world problems.",
+  description: "Software Engineering Student specializing in high-performance Full-Stack applications using MERN, Next.js, and FastAPI. Proven ability to optimize frontend rendering and architect RESTful APIs for high-concurrency environments. Experienced in Vector Databases (FAISS), Cloud Infrastructure (AWS/GCP), and the full SDLC to deliver scalable, production-grade solutions through advanced academic and independent projects.",
   resumeLink: "/Resume.pdf",
 };
 
