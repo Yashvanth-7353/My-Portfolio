@@ -42,11 +42,12 @@ const Hero = () => {
             {HERO_CONTENT.role}
           </motion.h2>
 
+          {/* CHANGED: Added 'text-justify' to this paragraph */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg text-text-muted leading-relaxed max-w-lg mb-10"
+            className="text-lg text-text-muted leading-relaxed max-w-lg mb-10 text-justify"
           >
             {HERO_CONTENT.description}
           </motion.p>
