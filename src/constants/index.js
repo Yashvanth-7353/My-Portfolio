@@ -15,7 +15,7 @@ export const HERO_CONTENT = {
   greeting: "HELLO, I AM",
   name: "YASHVANTH M U",
   role: "Full Stack Engineer.",
-  description: "Software Engineering Student specializing in high-performance Full-Stack applications using MERN, Next.js, and FastAPI. Proven ability to optimize frontend rendering and architect RESTful APIs for high-concurrency environments. Experienced in Vector Databases (FAISS), Cloud Infrastructure (AWS/GCP), and the full SDLC to deliver scalable, production-grade solutions through advanced academic and independent projects.",
+  description: "Software Engineering Student specializing in high-performance Full-Stack applications using MERN, Next.js, and FastAPI. Proven ability to optimize frontend rendering and architect RESTful APIs for high-concurrency environments. Experienced in Vector Databases (FAISS), Cloud Infrastructure (AWS/GCP), and the full SDLC to deliver scalable.",
   resumeLink: "/Resume.pdf",
 };
 
@@ -33,7 +33,7 @@ export const ABOUT_CONTENT = {
   subtitle: "From Logic to Systems",
   bio: "I am a results-oriented developer from RV College of Engineering with a track record of transforming concepts into deployed products. My expertise lies in combining creative problem-solving with Artificial Intelligence to deliver user-centric applications. Whether it's architecting 100% type-safe backends or training high-dimensional vector search engines, I treat every project as an engineering expedition.",
   stats: [
-    { label: "CGPA", value: "8.51" },
+    { label: "CGPA", value: "8.63" },
     { label: "Projects", value: "10+" },
     { label: "Failure Loops", value: "100+" }
  // Estimate

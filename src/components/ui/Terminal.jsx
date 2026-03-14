@@ -154,34 +154,42 @@ const Terminal = () => {
 
   // --- NEW: UNIQUE & CONFIDENT ANSWER ---
   const showHireMeResult = () => {
-    addOutput([
-      "",
-      "-------------------------------------------------------",
-      "  > CANDIDATE VALUE PROPOSITION: [MATCH FOUND] 🟢",
-      "-------------------------------------------------------",
-      "",
-      "  Most candidates write code. I engineer PRODUCTS.",
-      "",
-      "  > THE UNIQUE DIFFERENCE:",
-      "    1. I Build Systems, Not Just Features.",
-      "       From 100% type-safe backends to AI",
-      "       integration, I own the full lifecycle.",
-      "",
-      "    2. I thrive where Logic meets Creativity.",
-      "       CGPA 8.51 + National Hackathon Finalist means",
-      "       I have the discipline to study and the grit to ship.",
-      "",
-      "  > CAPABILITY MATRIX:",
-      "    ✔ Backend:  High-Throughput",
-      "    ✔ AI/ML:    Manual Vector Search & LLM integration",
-      "    ✔ Mindset:  'It works on my machine' is not enough.",
-      "",
-      "  -------------------------------------------------------",
-      "  STATUS: READY TO DEPLOY. LET'S BUILD SOMETHING GREAT.",
-      "  -------------------------------------------------------",
-      ""
-    ], "result");
-  };
+  addOutput([
+    "",
+    "-------------------------------------------------------",
+    "  > CANDIDATE ANALYSIS: MATCH FOUND",
+    "-------------------------------------------------------",
+    "",
+    "  Most candidates learn frameworks.",
+    "  I build working systems with them.",
+    "",
+    "  WHAT I ACTUALLY BRING:",
+    "",
+    "  1. Real backend engineering experience",
+    "     - FastAPI services",
+    "     - async database handling",
+    "     - authentication & RBAC systems",
+    "",
+    "  2. Ability to build complete products",
+    "     - AI-powered academic workflow system",
+    "     - civic grievance platform with geospatial tracking",
+    "     - network routing simulator with algorithm analysis",
+    "",
+    "  3. I think like an engineer, not a tutorial follower",
+    "     - systems > features",
+    "     - reliability > flashy demos",
+    "",
+    "  -------------------------------------------------------",
+    "  IF YOU NEED SOMEONE WHO CAN:",
+    "     design systems",
+    "     write clean backend logic",
+    "     and actually ship working products",
+    "",
+    "  I'm ready.",
+    "  -------------------------------------------------------",
+    ""
+  ], "result");
+};
 
   const addOutput = (outputLines, type = "output") => {
     const newLines = outputLines.map(line => ({ text: line, type: type }));
