@@ -2,9 +2,9 @@
 // src/constants/index.js
 
 export const NAV_LINKS = [
-  { id: "hero", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Stack" },
+  { id: "experience", label: "Experience" }, // <--- ADDED
+  { id: "skills", label: "Tech Stack" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
@@ -64,6 +64,19 @@ export const EDUCATION = [
   }
 ];
 
+export const EXPERIENCE = [
+  {
+    role: "Web Developer Intern",
+    company: "ImpactBridge",
+    duration: "March 2026 - Present",
+    description: [
+      "Redesigned and implemented the complete frontend using Angular, improving overall UI structure and user experience across key application flows.",
+      "Integrated frontend components with backend APIs and ensured seamless data flow.",
+      "Optimized UI performance and component structure, improving rendering efficiency and maintainability of the codebase."
+    ]
+  }
+];
+
 export const PROJECTS = [
   {
     title: "trueProject",
@@ -117,7 +130,7 @@ export const PROJECTS = [
 
 export const SKILLS = [
   { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "C++", "SQL"] },
-  { category: "Frontend", items: ["Next.js", "React.js", "Tailwind CSS", "React Flow", "Shadcn/UI"] },
+  { category: "Frontend", items: ["Next.js", "React.js", "Tailwind CSS", "React Flow", "Angular"] },
   { category: "Backend & Cloud", items: ["FastAPI", "Node.js", "AWS (S3/EC2)", "MongoDB", "PostgreSQL"] },
   { category: "AI & Tools", items: ["Google Gemini", "Docker", "Git/GitHub", "Linux", "Postman"] }
 ];
