@@ -1,4 +1,3 @@
-// src/components/sections/Experience.jsx
 import { motion } from "framer-motion";
 import { EXPERIENCE } from "../../constants";
 
@@ -14,7 +13,7 @@ const Experience = () => {
         className="mb-12"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold text-text-main mb-4">
-          Experience
+          Experience <span className="text-accent">.</span>
         </h2>
         <div className="w-20 h-1 bg-accent rounded-full"></div>
       </motion.div>
@@ -30,8 +29,8 @@ const Experience = () => {
             transition={{ delay: index * 0.2, duration: 0.5 }}
             className="group relative"
           >
-            {/* Interactive Card */}
-            <div className="bg-[#1e1e1e] border border-line rounded-xl p-6 md:p-8 hover:border-accent transition-all duration-300 shadow-lg hover:shadow-accent/5">
+            {/* CHANGED: Replaced hardcoded bg-[#1e1e1e] with bg-bg-surface */}
+            <div className="bg-bg-surface border border-line rounded-xl p-6 md:p-8 hover:border-accent transition-all duration-300 shadow-lg hover:shadow-accent/5">
               
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                 <div>
@@ -44,7 +43,7 @@ const Experience = () => {
                 </div>
                 
                 {/* Duration Badge */}
-                <div className="mt-4 md:mt-0 text-sm font-mono text-accent bg-accent/10 px-4 py-2 rounded-full inline-block w-max border border-accent/20">
+                <div className="mt-4 md:mt-0 text-sm font-mono text-accent bg-accent/5 px-4 py-2 rounded-full inline-block w-max border border-accent/20">
                   {exp.duration}
                 </div>
               </div>
