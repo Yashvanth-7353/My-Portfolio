@@ -28,7 +28,7 @@ export const LINKS = {
 export const ABOUT_CONTENT = {
   title: "Background",
   subtitle: "From Logic to Systems",
-  bio: "I'm a developer from RV College of Engineering who builds full-stack products end-to-end — from backend APIs and cloud infra to frontend interfaces. I care about technical correctness, real deployment, and writing code that holds up under scrutiny. Most of what I build, I can fully explain.",
+  bio: "I got into coding because I wanted to build things that work, not just things that look like they work. Most of my projects started from a real problem — fake GPS reports, untracked complaints, deployment that only runs on my laptop. I pick up what I need to solve it, and I stay until it's actually done.",
   stats: [
     { label: "CGPA", value: "8.63" },
     { label: "Projects", value: "10+" },
@@ -147,7 +147,7 @@ export const SKILLS = [
   },
   {
     category: "Frontend",
-    items: ["React.js", "Angular", "Next.js", "Tailwind CSS", "HTML", "CSS"],
+    items: ["React.js", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     category: "Backend",
@@ -155,7 +155,7 @@ export const SKILLS = [
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "FAISS"],
+    items: [ "MongoDB", "FAISS", "Firebase" ],
   },
   {
     category: "Cloud & Infra",
