@@ -67,7 +67,7 @@ export const EXPERIENCE = [
     duration: "March 2026 – Present",
     context: "Early-stage startup serving 10+ NGO clients across events, donations, and volunteer management.",
     description: [
-      "Rebuilt the Angular frontend from scratch across 4 NGO dashboard modules (Events, Donations, Shop, Volunteers), replacing the legacy UI with a reusable component architecture.",
+      "Rebuilt the React frontend from scratch across 4 NGO dashboard modules (Events, Donations, Shop, Volunteers), replacing the simple and static UI with a reusable component architecture.",
       "Implemented a read-through cache (30s TTL) and batched-write pipeline for analytics, cutting database call volume by 80% (~20 req/min to ~4 req/min).",
       "Built Node.js/Express REST APIs across all four modules with full CRUD workflows and structured request validation.",
     ],
