@@ -64,7 +64,7 @@ export const EXPERIENCE = [
   {
     role: "Software Engineering Intern",
     company: "ImpactBridge",
-    duration: "March 2026 – Present",
+    duration: "March 2026 – June 2026",
     context: "Early-stage startup serving 10+ NGO clients across events, donations, and volunteer management.",
     description: [
       "Rebuilt the React frontend from scratch across 4 NGO dashboard modules (Events, Donations, Shop, Volunteers), replacing the simple and static UI with a reusable component architecture.",
