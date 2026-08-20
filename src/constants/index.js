@@ -41,7 +41,7 @@ export const EDUCATION = [
     school: "RV College of Engineering",
     degree: "B.E. in Information Science & Engineering",
     year: "2023 – Present",
-    grade: "CGPA: 8.63",
+    grade: "CGPA: 8.77",
     desc: "Core Courses: Data Structures & Algorithms, DBMS, Operating Systems, OOP, Cloud Computing.",
   },
   {
