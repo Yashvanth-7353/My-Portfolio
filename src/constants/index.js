@@ -19,7 +19,7 @@ export const HERO_CONTENT = {
 
 export const LINKS = {
   github: "https://github.com/Yashvanth-7353",
-  linkedin: "https://www.linkedin.com/in/yashvanth-m-u-720598282/",
+  linkedin: "https://www.linkedin.com/in/yashvanthmu/",
   email: "yashavanth.mu870@gmail.com",
   phone: "+91 7353027029",
   resume: "/Resume.pdf",
